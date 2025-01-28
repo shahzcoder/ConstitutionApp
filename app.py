@@ -6,11 +6,10 @@ from PyPDF2 import PdfReader
 import os
 from groq import Groq
 
-# Set the API key
-os.environ["GROQ_API_KEY"] = "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"
+api_key = os.getenv("GROQ_API_KEY")
 
 # Initialize Groq client
-client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+client = Groq(api_key=api_key)
 
 # Streamlit App
 st.title("Pakistani Constitution Q&A App")
